@@ -2,13 +2,14 @@ import { Box, Card, CardContent, CardMedia, IconButton, Typography } from '@mui/
 import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import { useTheme } from '@emotion/react';
-const CreativeCard = () => {
+const CreativeCard = ({cd}) => {
+    const {title, details, image} = cd;
     const theme = useTheme();
     return (
         <Card sx={{ maxWidth: 345, p: 2, borderRadius: "10px", minWidth: "345px" }}>
             <CardMedia
                 sx={{ height: 190 }}
-                image="https://tmssl.akamaized.net/images/foto/galerie/lionel-messi-1711467863-132837.jpg"
+                image={image}
                 title="green iguana"
                 style={{
                     borderRadius: "10px"
@@ -28,10 +29,10 @@ const CreativeCard = () => {
             }}>
                 <Box>
                 <Typography gutterBottom variant="body" component="div">
-                    Web Design
+                    {title}
                 </Typography>
                 <Typography variant="body2" color="primary.main" fontWeight={600} fontSize={20}>
-                Web Design Research
+                {details}
                 </Typography>
                 </Box>
                 <IconButton sx={{
