@@ -1,7 +1,7 @@
 import React from 'react';
-import SectionTitle from '../../components/SectionTitle/SectionTitle';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import { Box, Grid } from '@mui/material';
-import Feedback from '../../components/Feedback/Feedback';
+import Feedback from '../../../components/Feedback/Feedback';
 
 const Feedbacks = () => {
     const feedbacks = [
