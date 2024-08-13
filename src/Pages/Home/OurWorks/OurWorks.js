@@ -49,7 +49,8 @@ const OurWorks = () => {
                         <Tab label="Web development" />
                         <Box>
                             <IconButton sx={{
-                                border: `1px solid #959EAD`,
+                                border: theme => `1px solid ${value === 0 ? "#959EAD" : theme.palette.primary.main}`,
+                                color: "primary.main",
                                 mr: 2
                             }}
                                 onClick={() => setValue(value - 1)}
@@ -58,7 +59,8 @@ const OurWorks = () => {
                                 <ArrowBackIcon />
                             </IconButton>
                             <IconButton sx={{
-                                border: `1px solid #959EAD`
+                                border: theme => `1px solid ${value === 3 ? "#959EAD" : theme.palette.primary.main}`,
+                                color: "primary.main"
                             }}
                                 onClick={() => setValue(value + 1)}
                                 disabled={value === 3}
